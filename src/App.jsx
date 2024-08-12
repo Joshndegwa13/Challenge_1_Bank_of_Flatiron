@@ -12,7 +12,7 @@ function App() {
 
   // Fetch transactions data from my db.json
   useEffect(() => {
-    fetch('http://localhost:3000/transactions')
+    fetch('https://bank-flatiron-backend-kappa.vercel.app/transactions')
       .then((response) => response.json())
       .then((data) => setTransactions(data))
       .catch((error) => console.error('Error fetching transactions:', error));
