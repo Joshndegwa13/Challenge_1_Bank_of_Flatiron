@@ -7,7 +7,7 @@ function TransactionForm({ onAddTransaction }) {
   const [category, setCategory] = useState('');
   const [amount, setAmount] = useState('');
 
-  // Handle form submission
+  // Handling  form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     // Call the function passed through props to add the new transaction

@@ -5,7 +5,7 @@ import TransactionForm from './components/TransactionForm';
 import TransactionList from './components/TransactionList';
 import './App.css'
 
-// The main component 
+// The main component for fecthing transaction data 
 function App() {
   const [transactions, setTransactions] = useState([]);
   const [search, setSearch] = useState('');
@@ -23,7 +23,7 @@ function App() {
     setTransactions([...transactions, { ...transaction, id: Date.now() }]);
   };
 
-  // Filter transactions based on the search  
+  // Filter transactions based on description 
   const filteredTransactions = transactions.filter((transaction) =>
     transaction.description.toLowerCase().includes(search.toLowerCase())
   );
